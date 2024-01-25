@@ -53,28 +53,28 @@ const TopNav = props => {
     // 是否将导航栏透明
     const navTransparent = (scrollS < document.documentElement.clientHeight - 12 && router.route === '/') || scrollS < 300 // 透明导航条的条件
 
-    if (header && navTransparent) {
-      nav && nav.classList.replace('bg-white', 'bg-none')
-      nav && nav.classList.replace('text-black', 'text-white')
-      nav && nav.classList.replace('border', 'border-transparent')
-      nav && nav.classList.replace('drop-shadow-md', 'shadow-none')
-      nav && nav.classList.replace('dark:bg-hexo-black-gray', 'transparent')
-    } else {
-      nav && nav.classList.replace('bg-none', 'bg-white')
-      nav && nav.classList.replace('text-white', 'text-black')
-      nav && nav.classList.replace('border-transparent', 'border')
-      nav && nav.classList.replace('shadow-none', 'drop-shadow-md')
-      nav && nav.classList.replace('transparent', 'dark:bg-hexo-black-gray')
-    }
+    // if (header && navTransparent) {
+    //   nav && nav.classList.replace('bg-white', 'bg-none')
+    //   nav && nav.classList.replace('text-black', 'text-white')
+    //   nav && nav.classList.replace('border', 'border-transparent')
+    //   nav && nav.classList.replace('drop-shadow-md', 'shadow-none')
+    //   nav && nav.classList.replace('dark:bg-hexo-black-gray', 'transparent')
+    // } else {
+    //   nav && nav.classList.replace('bg-none', 'bg-white')
+    //   nav && nav.classList.replace('text-white', 'text-black')
+    //   nav && nav.classList.replace('border-transparent', 'border')
+    //   nav && nav.classList.replace('shadow-none', 'drop-shadow-md')
+    //   nav && nav.classList.replace('transparent', 'dark:bg-hexo-black-gray')
+    // }
 
     const showNav = scrollS <= windowTop || scrollS < 5 || (header && scrollS <= header.clientHeight)// 非首页无大图时影藏顶部 滚动条置顶时隐藏
-    if (!showNav) {
-      nav && nav.classList.replace('top-0', '-top-20')
-      windowTop = scrollS
-    } else {
-      nav && nav.classList.replace('-top-20', 'top-0')
-      windowTop = scrollS
-    }
+    // if (!showNav) {
+    //   nav && nav.classList.replace('top-0', '-top-20')
+    //   windowTop = scrollS
+    // } else {
+    //   nav && nav.classList.replace('-top-20', 'top-0')
+    //   windowTop = scrollS
+    // }
     navDarkMode()
   }, throttleMs)
   )
